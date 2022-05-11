@@ -200,6 +200,7 @@ class Compear():
         return df2
 
     def Save_word_doc(self, Title, doc):
+        #saves word documnet with the name given by Title
         doc.save(Title + '.docx')
 
     def Word_document_init(self, doc):
@@ -224,30 +225,34 @@ class Compear():
         )
 
     def match_type(self, df,index):
+        #finds what match type is at index
         if df.loc[index, "Exact_match"] == 1:
             return 1
         else:
             return 0
 
     def highlight_words(self, data_frame, string, doc, col):
+        # Highlight section, needs further development
         sim_para = doc.add_paragraph()
         i: int = 0
         j: int = 0
         while i in range(data_frame.shape[0]):
-            #if j in range(len(string)):
-            #sim_para.add_run(string[j:(df.loc[i, col[1]] + 1)])
+            # Highlights the part of the strings that the dataframe holds the indexes for
+            # Uses the match type function to decide what color based on the return value
             if self.match_type(data_frame, i):
+                    # Exact Match
                     sim_para.add_run(
                         string[data_frame.loc[i, col[1]]:(data_frame.loc[i, col[2]] + 1)]
                     ).font.highlight_color = WD_COLOR_INDEX.TURQUOISE
             else:
+                    # Simular Match
                     sim_para.add_run(
                         string[data_frame.loc[i, col[1]]:(data_frame.loc[i, col[2]] + 1)]
                     ).font.highlight_color = WD_COLOR_INDEX.PINK
-            #    j = j + df.loc[i, col[2]]
+            # adds spaces between each match so they are easier to see
             sim_para.add_run(" ")
             i = i + 1
-        # clean up
+        # Prints the string after all of the matches have been highlighted
         if j != len(string):
             sim_para.add_run(
                 string[j:len(string)]
