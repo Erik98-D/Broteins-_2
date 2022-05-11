@@ -2,7 +2,7 @@
 Final code
 Welcome to the Protein Chain Analyzing Software.
 
-Table on Contents
+Table of Contents
 1. Installation Process
 2. Using the Program
 3. Viewing the Docx File
