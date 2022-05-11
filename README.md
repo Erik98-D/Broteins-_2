@@ -3,12 +3,19 @@ Final code
 Welcome to the Protein Chain Analyzing Software.
 
 Table of Contents
-1. Installation Process
-2. Using the Program
-3. Viewing the Docx File
+1. System Requirements
+2. Installation Process
+3. Using the Program
+4. Viewing the Docx File
 
+## 1. System Requirements
+   - Windows Computer
+   - Windows 10 or above
+   - Keyboard
+   - Monitor
+   - Mouse
 
-## 1. To install the Program 
+## 2. To install the Program 
    - You will want to first download the zip file provided.
    - Next you will see an executable file. 
    - It is recommended you create a new folder on your device and copy and paste the .exe file into is, as your saved docx files will be
@@ -17,7 +24,7 @@ Table of Contents
    - It may take a few seconds to load up.
    - All done! you're ready to go.
 
-## 2. Using the Program
+## 3. Using the Program
    - You will see two entry boxes. Here you will want to copy and paste in two different amino acid chains
    - Please ensure there are no symbols, numbers, or empty entry's otherwise you will get a warning of an invalid submission.
    - You may select between a "manual" or "default" name. This is to name your output file. You can have a default name, or you can create one yourself. If you use an existing file, the results from that file will be replaced with the new results.
@@ -25,7 +32,7 @@ Table of Contents
    - The Docx file will be saved to the same location the .exe file is in.
    - Once saved, the submission boxes will automatically clear so you may submit again if you would like or close the program.
 
-## 3. Viewing the Docx File
+## 4. Viewing the Docx File
    - Open the .docx file that you have previouly saved.
    - You will see the first protein sequence that you entered and it's molecular weight. Then you will see the second sequence, or your "comparison sequence" and it's molecular weight.
    - Next you will see a table. This table is read by each row. So for each row it will first go by the similarity found in Sequence one, and it's location will be given by the starting index to it's ending index. Next the column will be for Sequence 2. This will show the similarity or identical sequence and it's starting and ending location in Sequence 2.
